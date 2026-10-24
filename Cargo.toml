@@ -1,8 +1,22 @@
 [package]
 name = "battery_report_tray"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 
 [dependencies]
-windows = { version = "0.62.2", features = ["Win32_Foundation", "Win32_Storage_FileSystem", "Win32_System_IO", "Win32_System_Power", "Win32_Devices_DeviceAndDriverInstallation", "Win32_Security", "Win32_UI_Shell", "Win32_UI_WindowsAndMessaging", "Win32_System_LibraryLoader", "Win32_Graphics_Gdi"] }
+windows = { version = "0.62.2", features = [
+    "Win32_Foundation",
+    "Win32_Storage_FileSystem",
+    "Win32_System_IO",
+    "Win32_System_Power",
+    "Win32_Devices_DeviceAndDriverInstallation",
+    "Win32_Security",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_LibraryLoader",
+    "Win32_Graphics_Gdi",
+] }
 windows-core = "0.62.2"
+
+[build-dependencies]
+winres = "0.1.12"
